@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .nav {
+            background-color: #f1f1f1;
+            padding: 20px 10px;
+        }
+        
+        .header {
+            color: black;
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            position: relative;
+            top: 0;
+            width: 100%;
+            transition: 0.2s;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Untitled Document</title>
+</head>
+
+<body>
+
+    <div class="nav">
+        <div class="header">MANEGER</div>
+        <div style="position:relative ;"> <a href="/logout">logout<a></div></div>
+
+    <div style="margin-top:auto;">
+        <h3 style="color: rgb(222, 222, 11); text-decoration: underline;">Newly Arrived</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">email</th>
+                    <th scope="col">subject</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">view</th>
+                    <th scope="col">Stutas</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for val in vals %}
+
+                <tr>
+                    <th scope="row">{{val[0]}}</th>
+                    <td>{{val[1]}}</td>
+                    <td>{{val[3]}}</td>
+                    <td>{{val[2]}}</td>
+                    <td><a href="/viewc/{{val[0]}}">view..</a></td>
+            <td>{{val[8]}}</td>
+            </tr>
+
+            {% endfor %}
+
+            </tbody>
+            </table>
+        </div>
+
+        <br/>
+        <div style="margin-top:auto;">
+            <h3 style="color: rgb(0, 248, 74); text-decoration: underline;">Solved</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">email</th>
+                        <th scope="col">subject</th>
+                        <th scope="col">Department</th>
+                        <th scope="col">view</th>
+                        <th scope="col">Stutas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for val in vals1 %}
+                    <tr>
+                        <th scope="row">{{val[0]}}</th>
+                        <td>{{val[1]}}</td>
+                        <td>{{val[3]}}</td>
+                        <td>{{val[2]}}</td>
+                        <td><a href="/viewc/{{val[0]}}">view..</a></td>
+                        <td>{{val[8]}}</td>
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+        <br/>
+        <div style="margin-top:auto;">
+            <h3 style="color: rgb(250, 0, 0); text-decoration: underline;">Rejected</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">email</th>
+                        <th scope="col">subject</th>
+                        <th scope="col">Department</th>
+                        <th scope="col">view</th>
+                        <th scope="col">Stutas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for val in vals2 %}
+                    <tr>
+                        <th scope="row">{{val[0]}}</th>
+                        <td>{{val[1]}}</td>
+                        <td>{{val[3]}}</td>
+                        <td>{{val[2]}}</td>
+                        <td><a href="/viewc/{{val[0]}}">view..</a></td>
+                        <td>{{val[8]}}</td>
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+        <script>
+            // When the user scrolls down 50px from the top of the document, resize the header's font size
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    document.getElementById("header").style.fontSize = "20px";
+                } else {
+                    document.getElementById("header").style.fontSize = "50px";
+                }
+            }
+        </script>
+
+</body>
+
+</html>

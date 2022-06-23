@@ -1,0 +1,201 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 50px;
+            resize: vertical;
+        }
+        
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        
+        .container {
+            background-color: grey;
+            width: 1000px;
+            border: 20px solid green;
+            padding: 150px;
+            margin: 50px;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 50px;
+        }
+        /* CSS */
+        
+        .button-3 {
+            appearance: none;
+            background-color: #2ea44f;
+            border: 1px solid rgba(27, 31, 35, .15);
+            border-radius: 6px;
+            box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+            box-sizing: border-box;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+            font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px;
+            padding: 6px 16px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+        
+        .button-3:focus:not(:focus-visible):not(.focus-visible) {
+            box-shadow: none;
+            outline: none;
+        }
+        
+        .button-3:hover {
+            background-color: #2c974b;
+        }
+        
+        .button-3:focus {
+            box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+            outline: none;
+        }
+        
+        .button-3:disabled {
+            background-color: #94d3a2;
+            border-color: rgba(27, 31, 35, .1);
+            color: rgba(255, 255, 255, .8);
+            cursor: default;
+        }
+        
+        .button-3:active {
+            background-color: #298e46;
+            box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+        }
+        
+        nav {
+            background-color: #000000;
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav img {
+            width: 150px;
+        }
+        
+        .nav-links {
+            flex: 1;
+            text-align: right;
+        }
+        
+        .nav-links ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+        
+        .nav-links ul li a {
+            color: rgba(255, 255, 255, 0.918);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bolder;
+        }
+        
+        .nav-links ul li::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition: 0, 5s;
+        }
+        
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Untitled Document</title>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html"></a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/about">ABOUT</a></li>
+                <li><a href="/logout">logout</a></li>
+                <li><a href="/complaint">complaint</a></li>
+            </ul>
+        </div>
+    </nav>
+    <h3>COMPLAINT</h3>
+
+    <div class="container">
+        <form action="/complaintsubmit" method="post">
+
+            <input type="text" id="name" name="sub" placeholder="Subject..">
+
+
+            <select name="department">
+                <option value="COMPUTER">COMPUTER ENGINEERING</option>
+                <option value="CIVIL">CIVIL ENGINEERING</option>
+                <option value="MECHANICAL">MECHANICAL ENGINEERING</option>
+                <option value="AUTOMOBILE">AUTOMOBILE ENGINEERING</option>
+
+            </select>
+
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+            <!-- <input type="submit" value="Submit"> -->
+            <!-- <a href="success page.html">Submit</a> -->
+            <!-- HTML !-->
+            <!-- <button class="button-3" role="button">Button 3</button> -->
+            <!-- <form method="POST" action="success page.html">
+      <input type="submit"/>
+    </form> -->
+
+            <input type='submit' style='padding-left:10px;padding-top:10px;padding-right:10px;padding-bottom:10px;margin-left:10px;margin-top:10px;margin-right:10px;margin-bottom:10px;background-color:#1b90bb;color:#FFFFFF;border-left-width:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-color:#d5d5d5;border-radius:5px;cursor:pointer'
+                value='Submit' onMouseOver=this.style.backgroundColor='#FFFFFF' ;this.style.color='#1b90bb' ;this.style.borderColor='#d5d5d5' onMouseOut=this.style.backgroundColor='#1b90bb' ;this.style.color='#FFFFFF' ;this.style.borderColor='#d5d5d5' />
+
+
+        </form>
+    </div>
+</body>
+
+</html>

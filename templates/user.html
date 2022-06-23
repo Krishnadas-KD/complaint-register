@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>project </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<script>
+    setTimeout(function() {
+        document.getElementById('alert').style.display = 'none';
+
+    }, 3000);
+</script>
+
+<body>
+    <section class="header">
+        <nav>
+
+            <div class="nav-links">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/about">ABOUT</a></li>
+                    <li><a href="/complaint">complaint</a></li>
+                    <li><a href="/logout">logout</a></li>
+
+                </ul>
+            </div>
+        </nav>
+        {% if msg=="Successfully submitted" %}
+        <div class="alert alert-success" id="alert" role="alert">Successfully submitted</div>
+
+        {% endif %}
+        <div class="text-box">
+            <h1>REDDRESSEL SYSTEM</h1>
+            <P>here we are introducing user complaint box</P>
+            <a href="/complaint" class="hero-btn">complaint here</a>
+
+
+            <table class="table" style="margin-top:50px;  margin-left: auto; margin-right: auto;">
+                <thead>
+                    <tr>
+                        <th scope="col">Idno</th>
+                        <th scope="col">Subject</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for val in vals %}
+
+                    <tr>
+                        <th scope="row">{{val[0]}}</th>
+                        <td>{{val[3]}}</td>
+                        <td>{{val[8]}}</td>
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+
+        </sectoin>
+        <section>
+
+
+        </section>
+
+
+
+
+
+
+
+
+</body>
